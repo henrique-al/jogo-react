@@ -1,0 +1,49 @@
+.game__wd {
+  width: 100vw;
+  height: 100vh;
+  background: url('https://i.imgur.com/kZdjzfb.jpg')  no-repeat;
+  background-size: cover;
+}
+
+.modalWDContainer{
+  background-color: rgba(0, 0, 0, 0.342);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+}
+
+.modal-WD{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal-WD h1{
+  font-size: 30px;
+}
+
+.modal-WD button{
+  color: black;
+  font-weight: light;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  transition: .4s;
+}
+
+.modal-WD button:hover{
+  color: #ffffff;
+  background-color: #000000;
+}

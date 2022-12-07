@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Montserrat:wght@300;400&family=Paytone+One&family=Raleway:ital@1&display=swap');
+
+.gradient {
+  background-image: linear-gradient(to bottom, rgb(13, 49, 207), rgb(7, 94, 165), rgb(155, 170, 238));
+  color: black; 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: alteraCor 1ms infinite alternate linear;
+}
+
+.title-cadastro {
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  top: 100px;
+  animation: alteraTitulo 10s alternate infinite linear;
+}
+
+@keyframes alteraTitulo {
+    0%{opacity: 0.5;}
+    100%{opacity: 1;}
+}
+
+.modal-cadastro {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  background: rgba(18, 83, 212, 0.2);
+  background: radial-gradient(circle, rgba(53, 63, 206, 0.2) 0%, rgba(3, 20, 119, 0.2) 85%);
+  color: antiquewhite;
+  text-align: center;
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  left: 450px;
+  top: 260px;
+  border-radius: 20px;
+  border: solid 2px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input.cadastro,
+h3.cadastro {
+  text-align: left;
+  margin-left: -250px;
+  margin-top: 5px;
+  font-size: 15px;
+  color: #deeff5;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input.cadastro {
+  margin-left: -30px;
+  border-radius: 5px;
+  border: solid white;
+  color: #2075b3;
+  font-weight: bold;
+  width: 300px;
+  height: 30px;
+}
+
+::placeholder {
+  color: #65a0ca;
+  font-weight: 400;
+}
+
+button.cadastro {
+  transition: .4s;
+  width: 200px;
+  height: 45px;
+  background-color: rgba(113, 113, 243, 0.2);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  color: rgb(238, 238, 255);
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+button.cadastro:hover {
+  background-color: rgb(238, 238, 255, 0.5);
+  color: rgba(3, 52, 151, 0.8);
+}
+
+#img {
+  margin-top: 70px;
+  margin-left: 410px;
+  border: #7a7ae9 solid 2px;
+  border-radius: 20px;
+}
+
+body {
+  background-image: url(https://wallpaperaccess.com/full/39632.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: alteraFundo 30s alternate infinite linear; 
+  transform-style: preserve-3d;
+}
+
+@keyframes alteraFundo {
+    0%{background-size: 100%; }
+    50%{background-size: 150%;}
+    100%{background-size: 200%;}
+}

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+.modal-jogo {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.conteudo-modal {
+  position: relative;
+  background: rgb(224, 10, 10);
+  background: linear-gradient(0deg, rgba(224, 10, 10, 1) 0%, rgba(94, 2, 2, 1) 100%);
+  width: 40%;
+  flex-direction: column;
+  height: 83%;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+
+.titulo-modal {
+  position: absolute;
+  font-family: 'Bebas Neue', cursive;
+  color: #a80b0b;
+  font-size: 60px;
+  top: 5px;
+  left: 165px;
+}
+
+.tituloFundo-modal {
+  position: absolute;
+  font-size: 60px;
+  font-family: 'Bebas Neue', cursive;
+  top: 15px;
+  left: 175px;
+  color: wheat;
+}
+
+.modal-h3 {
+  color: wheat;
+  font-size: 20px;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.ranking-titulo {
+  display: flex;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  background-color: #a70303;
+  border-radius: 20px 20px 0 0;
+}
+
+.subtitulo-modal {
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-size: 28px;
+  position: absolute;
+  top: 80px;
+  color: wheat;
+}
+
+.ranking-modal {
+  background-color: #ffffff;
+  border: solid #a70303 0.5px;
+  color: rgb(26, 25, 25);
+  width: 430px;
+  height: 270px;
+  border-radius: 20px;
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.btn-modal {
+  min-width: 150px;
+  min-height: 30px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  border: none;
+  border-radius: 1000px;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  top: 86%;
+}
+
+.btn-modal::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(170px + 12px);
+  min-height: calc(50px + 12px);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.btn-modal:hover::before,
+.btn-modal:focus::before {
+  opacity: 1;
+}
+
+.btn-modal::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s;
+}
+
+.btnS {
+  color: white;
+  position: absolute;
+  background: #06bb24;
+  background: linear-gradient(90deg, rgb(24, 155, 12) 0%, rgb(16, 151, 83) 100%);
+  box-shadow: 12px 12px 24px rgba(2, 88, 28, 0.64);
+  border: 2px solid #64db6e;
+  right: 40px;
+}
+
+.btnS:hover,
+.btnS:focus {
+  color: rgb(155, 247, 147);
+}
+
+.btnS::before {
+  border: 6px solid #47d46a;
+  box-shadow: 0 0 60px rgba(15, 182, 29, 0.64);
+}
+
+.btnN:hover,
+.btnN:focus {
+  color: #f1b8b8;
+}
+
+.btnN {
+  position: absolute;
+  color: white;
+  background: #8b0202;
+  background: linear-gradient(90deg, rgb(219, 50, 50) 0%, rgb(248, 91, 91) 100%);
+  box-shadow: 12px 12px 24px rgba(94, 2, 2, 0.64);
+  border: 2px solid .910528;
+  border: 2px solid rgb(199, 59, 59);
+  left: 40px;
+}
+
+.btn-modal:hover::after,
+.btn-modal:focus::after {
+  animation: none;
+  display: none;
+}
+
+.btnN::before {
+  border: 6px solid #df3030;
+  box-shadow: 0 0 60px rgba(70, 2, 11, 0.64);
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.modal-skins {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 72%;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}

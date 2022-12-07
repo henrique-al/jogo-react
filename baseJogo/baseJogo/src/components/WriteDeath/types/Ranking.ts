@@ -1,0 +1,1 @@
+export type ranking = {name: string, score: number}

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace');
+
+.jogoDaVelhaMain {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('https://c.wallhere.com/photos/09/81/pixel_art_castle_fantasy_art_clouds_dark-1929717.jpg!d');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.title {
+  text-align: center;
+  height: 80px;
+  font-size: 3rem;
+  color: rgb(252, 201, 155);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 0 20px 0 20px;
+  animation: trocaCor 7s infinite alternate;
+  margin-bottom: 2rem;
+  border: solid rgb(209, 122, 9);
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  background-color: rgba(248, 200, 138, 0.5);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 240px);
+  grid-template-rows: repeat(3, 200px);
+  gap: 1rem;
+}
+
+.cell {
+  border-radius: 20px 0 20px 0;
+  font-weight: 500;
+  color: rgb(75, 24, 0);
+  cursor: pointer;
+  background-color: rgb(75, 24, 0);
+  border: solid rgb(209, 122, 9) 5px;
+}
+
+@keyframes trocaCor {
+  0% {
+      color: brown;
+  }
+
+  50% {
+      color: white;
+  }
+
+  100% {
+      color: rgb(250, 241, 112);
+  }
+}
+
+.cell.Escudo,
+.cell.Espada,
+.game-over .cell {
+  cursor: not-allowed;
+}
+
+.cell:not(.Escudo):not(.Espada):hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-jv{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #00000069;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board.game-over {
+  opacity: 0.8;
+}
+
+/* .winner-message {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 300px;
+  background-color: #c09405;
+  border-radius: 10px;
+} */
+
+.winner-message span.Espada {
+  color: brown;
+}
+
+
+.winner-message span.Escudo {
+  color: rgb(250, 241, 112);
+}
+
+.winner-message span.E {
+  color: white;
+}
+
+.winner-message {
+  color: white;
+  text-align: center;
+}
+
+.button-jv {
+  border: solid rgb(248, 187, 95) 0.5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  background-color: rgb(226, 183, 43);
+  color: rgb(253, 232, 188);
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  transition: .2s;
+}
+
+.button-jv:hover {
+  background-color: rgb(190, 162, 3);
+}
+
+.cell.Espada,
+.cell.Escudo {
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.cell.Espada {
+  background-image: url('../../../public/assets/espadaPers.png');
+  background-size: 100px;
+}
+
+.cell.Escudo {
+  background-image: url('../../../public/assets/escudoPers.png');
+  background-size: 100px;
+}
+
+#imgEsp {
+  position: absolute;
+  left: 40px;
+  bottom: 180px;
+  border: solid rgb(235, 118, 118);
+  background-color: brown;
+  border-radius: 30px;
+  height: 300px;
+}
+
+#imgEsc {
+  position: absolute;
+  border: solid rgb(247, 243, 186);
+  right: 40px;
+  bottom: 180px;
+  background-color: rgba(250, 241, 112);
+  border-radius: 30px;
+  height: 300px;
+}
+
+.placar-jv{
+  font-size: 150px;
+  font-weight: bold;
+}
+
+.placar-derrota-jv{
+  margin: 10px 38px;
+  font-size: 48px;
+  text-align: center;
+  font-family: 'Covered By Your Grace', cursive;
+}
+
+.modalGameOver, .modalWinner {
+  border-radius: 20px;
+  color: rgb(253, 234, 226);
+  font-size: 15px;
+  text-align: center;
+}
+
+.modalWinner{
+  margin-bottom: 60px;
+}
+
+#gameOver, #winner{
+  color: rgb(53, 5, 1);
+  font-size: 50px;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+#winner{
+  color: rgb(226, 241, 2);
+  font-size: 30px;
+}
+.h3-jv {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  background-color: rgba(243, 241, 95, 0.6);
+}
+
+#sair{
+  left: 540px;
+  background-color: rgb(156, 77, 4); 
+}
+
+#sair:hover{
+  background-color: rgb(99, 49, 2);
+}
+
+.modal-jv-content{
+  width: 500px;
+  height: fit-content;
+  padding: 0px 0px 30px 0px;
+  background: radial-gradient(circle, rgba(255, 143, 6, 1) 0%, rgba(98, 48, 0, 1) 81%);
+  border-radius: 30px;
+}
+
+.buttons-jv{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
