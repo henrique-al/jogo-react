@@ -2,7 +2,6 @@ import { useState } from "react"
 import { mapSpots } from "../data/mapSpots";
 import { CharacterSides } from "../types/CharacterSides";
 
-
 export const useCharacter = () => {
   const [pos, setPos] = useState({ x: 6, y: 6 });
   const [side, setSide] = useState<CharacterSides>('down');
