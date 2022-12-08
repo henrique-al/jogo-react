@@ -97,7 +97,7 @@ const JogoDaVelha = () => {
         setGameOver(true);
         console.log(ranking);
         setJogador({ name: jogador.name, score: 0 });
-        return;
+        return; 
       }
       if (elementos.every((cell) => cell === "Espada")) {
         marcarPonto();
@@ -105,6 +105,8 @@ const JogoDaVelha = () => {
       }
     });
 
+
+    
     // caso não haja ganhador, verifica empate
     deuEmpate();
   };

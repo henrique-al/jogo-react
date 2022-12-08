@@ -6,31 +6,6 @@ const Help = () => {
       <div className="conteudo-help">
         <div className="wd-help">
           <h1>Write or Die</h1>
-          <ol>
-            <li>
-              O jogador iniciará com 5 vidas, acabando o jogo caso chegue a 0
-            </li>
-            <li>
-              Os 4 tipos de inimigos, sendo eles:
-              <ul>
-                <li>Esqueleto</li>
-                <li>Relógio</li>
-              </ul>
-              Ambos voadores e terrestres
-            </li>
-            <li>
-              Sobre a cabeça dos inimigos aparecerão as letras que causam dano
-              no mesmo, quando as letras acabam ele morre
-            </li>
-            <li>
-              As letras e velocidade de nascimento de novos inimigos variam de
-              acordo com o nível, aumentando a cada 10 mortes
-            </li>
-            <li>
-              O nome do jogador e sua pontuação aparecerão no ranking somente se
-              o seu score estiver entre o Top 3
-            </li>
-          </ol>
         </div>
         <div className="jv-help">
           <h1>TIC-TAC-TOE</h1>
@@ -40,6 +15,7 @@ const Help = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 
