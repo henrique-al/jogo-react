@@ -14,8 +14,8 @@
 
 .conteudo-modal {
   position: relative;
-  background: rgb(224, 10, 10);
-  background: linear-gradient(0deg, rgba(224, 10, 10, 1) 0%, rgba(94, 2, 2, 1) 100%);
+  background: rgb(165,38,223);
+  background: linear-gradient(52deg, rgba(165,38,223,1) 29%, rgba(31,193,227,1) 88%);
   width: 40%;
   flex-direction: column;
   height: 83%;
@@ -29,19 +29,21 @@
 .titulo-modal {
   position: absolute;
   font-family: 'Bebas Neue', cursive;
-  color: #a80b0b;
+  color: rgb(52, 105, 167);
   font-size: 60px;
-  top: 5px;
-  left: 165px;
+  top: 10px;
+  left: 70px;
+  letter-spacing: 2px;
 }
 
 .tituloFundo-modal {
+  letter-spacing: 2px;
   position: absolute;
   font-size: 60px;
   font-family: 'Bebas Neue', cursive;
-  top: 15px;
-  left: 175px;
-  color: wheat;
+  top: 10px;
+  left: 75px;
+  color: white;
 }
 
 .modal-h3 {
@@ -57,7 +59,7 @@
   justify-content: center;
   font-size: 20px;
   color: white;
-  background-color: #a70303;
+  background-color: rgb(3, 52, 124);
   border-radius: 20px 20px 0 0;
 }
 
@@ -66,12 +68,17 @@
   font-size: 28px;
   position: absolute;
   top: 80px;
-  color: wheat;
+  background-image: linear-gradient(to bottom, rgb(166, 160, 245), rgb(196, 200, 250), rgb(195, 255, 249));
+  color: black;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  left: 360px;
 }
 
 .ranking-modal {
   background-color: #ffffff;
-  border: solid #a70303 0.5px;
+  border: solid rgb(162, 138, 250)0.5px;
   color: rgb(26, 25, 25);
   width: 430px;
   height: 270px;
@@ -135,21 +142,20 @@
 .btnS {
   color: white;
   position: absolute;
-  background: #06bb24;
-  background: linear-gradient(90deg, rgb(24, 155, 12) 0%, rgb(16, 151, 83) 100%);
-  box-shadow: 12px 12px 24px rgba(2, 88, 28, 0.64);
-  border: 2px solid #64db6e;
+  background: #5a06bb;
+  background: linear-gradient(90deg, rgb(12, 103, 155) 0%, rgb(16, 90, 151) 100%);
+  border: 2px solid #64cddb;
   right: 40px;
 }
 
 .btnS:hover,
 .btnS:focus {
-  color: rgb(155, 247, 147);
+  color: rgb(147, 219, 247);
 }
 
 .btnS::before {
-  border: 6px solid #47d46a;
-  box-shadow: 0 0 60px rgba(15, 182, 29, 0.64);
+  border: 6px solid #79e5ec;
+  box-shadow: 10px 5px 5px rgb(10, 113, 209);
 }
 
 .btnN:hover,
@@ -157,14 +163,14 @@
   color: #f1b8b8;
 }
 
-.btnN {
+.btnN, .btnSair, .btnRegras {
   position: absolute;
   color: white;
   background: #8b0202;
   background: linear-gradient(90deg, rgb(219, 50, 50) 0%, rgb(248, 91, 91) 100%);
   box-shadow: 12px 12px 24px rgba(94, 2, 2, 0.64);
   border: 2px solid .910528;
-  border: 2px solid rgb(199, 59, 59);
+  border: 2px solid rgb(248, 136, 136);
   left: 40px;
 }
 
@@ -176,7 +182,29 @@
 
 .btnN::before {
   border: 6px solid #df3030;
-  box-shadow: 0 0 60px rgba(70, 2, 11, 0.64);
+  box-shadow: 0 0 60px rgba(190, 4, 29, 1);
+}
+
+.btnSair, .btnRegras{
+  position: absolute;
+  top: 485px;
+  height: 35px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 105px;
+}
+
+.btnRegras{
+  background: rgb(151, 10, 216);
+  background: linear-gradient(52deg, rgb(148, 10, 212) 29%, rgb(240, 17, 229) 88%);
+  border: #de42f3 solid;
+  left: 285px;
+}
+
+.btnRegras:hover, .btnSair:hover{
+   box-shadow: 10px 15px 15px rgba(0,0,0,0.5);
 }
 
 .line {

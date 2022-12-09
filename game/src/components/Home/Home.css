@@ -5,15 +5,15 @@
   align-items: center;
 }
 
-.wd, .jv, .guarda_roupa, .fechar{
+.wd, .jv, .guarda_roupa, .lightsOut{
   position: absolute;
 }
 
-.wd:hover, .jv:hover, .guarda_roupa:hover, .fechar:hover{
+.wd:hover, .jv:hover, .guarda_roupa:hover, .lightsOut:hover{
   cursor: pointer;
 }
 
-.wd, .fechar{
+.wd, .lightsOut{
   width: 170px;
   height: 80px;
   left: 247px;
@@ -24,7 +24,7 @@
   top: 76px;
 }
 
-.fechar{
+.lightsOut{
   background-color: rgba(255, 255, 0, 0);
   top: 494px;
 }

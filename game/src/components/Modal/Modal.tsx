@@ -38,7 +38,7 @@ const Modal = ({ titles, game, hero }: Props) => {
 
   return (
     <>
-      {a !== 0 && a !== 1 ? (
+      {a !== 0 && a !== 1 && (
         <div className="modal-jogo">
           <div className="conteudo-modal">
             <h1 className="titulo-modal">{titles.title}</h1>
@@ -70,26 +70,14 @@ const Modal = ({ titles, game, hero }: Props) => {
               <button className="btnN btn-modal" onClick={() => handleClick()}>
                 Voltar
               </button>
-            </> : <div className="modal-skins">
+            </> : <div className="modal-skins"> 
               <Carrossel hero={hero} />
+              <Link to={'/'}><button className="btnSair btn-modal" onClick={() => handleExit()}>Sair</button></Link>
+              <Link to={'/Regras'}><button className="btnRegras btn-modal" onClick={() => handleExit()}>Regras</button></Link>
             </div>}
           </div>
         </div>
-      ) : a === 1 ? (
-        <div className="modal-jogo">
-          <div className="conteudo-modal">
-            <h1 className="titulo-modal">{titles.title}</h1>
-            <h1 className="tituloFundo-modal">{titles.title}</h1>
-            <p className="subtitulo-modal">{titles.sub}</p>
-            <br />
-            <br />
-            <br />
-            <p className="confirma-saida">Deseja realmente sair?</p>
-            <button className="btnS btn-modal" onClick={() => handleClick()}>Voltar</button>
-            <Link to={'/'}><button className="btnN btn-modal" onClick={() => handleExit()}>Sair</button></Link>
-          </div>
-        </div>
-      ): (<p></p>)}
+      ) }
     </>
   );
 };

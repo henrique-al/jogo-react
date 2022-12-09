@@ -23,21 +23,21 @@ const Home = (/*{ hero }: Props*/) => {
         <C.Container>
           <C.Map>
             <abbr title="Write or die"><div className="wd" onClick={() => setGame(3)}></div></abbr>
-            <abbr title="TIC-TAC-TOE"><div className="jv" onClick={() => setGame(2)}></div></abbr>
+            <abbr title="Tic-Tac-Toe"><div className="jv" onClick={() => setGame(2)}></div></abbr>
             <abbr title="Skins"><div className="guarda_roupa" onClick={() => setGame(4)}></div></abbr>
-            <div className="fechar" onClick={() => setGame(1)}></div>
+            <abbr title="Lights Out"><div className="lightsOut" onClick={() => setGame(5)}></div></abbr>
           </C.Map>
         </C.Container>
         {game !== 0 && (
           <Modal hero={hero}
             titles={
               game === 2
-                ? { title: "TIC-TAC-TOE", sub: "Medieval" }
+                ? { title: "T I C  -  T A C -  T O E", sub: "Medieval" }
                 : game === 3
-                ? { title: "WRITE OR DIE", sub: "Tempo" }
+                ? { title: "W R I T E - O R - D I E", sub: "" }
                 : game === 4
-                ? { title: "SKINS", sub: "" }
-                : { title: "SAIR", sub: "" }
+                ? { title: "SKINS - AND - RULES", sub: "" }
+                : { title: "L  I  G  H  T  S  - O  U  T", sub: "Future" }
             }
             game={game}
           />

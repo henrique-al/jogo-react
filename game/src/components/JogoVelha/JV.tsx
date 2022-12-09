@@ -160,7 +160,7 @@ const JogoDaVelha = () => {
 
   return (
     <div className="jogoDaVelhaMain">
-      {/* <h1 className="title">Jogo da Velha</h1> */}
+      <h1 className="title">Jogo da Velha</h1>
 
       <div className={`board ${winner ? "game-over" : ""}`}>
         {board.map((item, index) => (

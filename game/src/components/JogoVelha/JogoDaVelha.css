@@ -24,7 +24,7 @@
   margin-bottom: 2rem;
   border: solid rgb(209, 122, 9);
   font-family: 'Kdam Thmor Pro', sans-serif;
-  background-color: rgba(248, 200, 138, 0.5);
+  margin-left: -100px;
 }
 
 .board {
