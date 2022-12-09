@@ -7,7 +7,7 @@ import Carrossel from './components/Carrossel/Carrossel';
 import Help from './components/Help/Help';
 import Home from './components/Home/Home';
 import JogoDaVelha from './components/JogoVelha/JV';
-import Modal from './components/Modal/Modal';
+import LightsOut from './components/LightsOut/LO';
 import WriteDeath from './components/WriteDeath/WD';
 
 
@@ -21,6 +21,7 @@ const App = () => {
           <Route path='/wd' element={<WriteDeath />}/>
           <Route path='/jv' element={<JogoDaVelha />}/>
           <Route path='/help' element={<Help/>} />
+          <Route path='/lo' element={<LightsOut/>}/>
         </Routes>
       </BrowserRouter>
     </div>
