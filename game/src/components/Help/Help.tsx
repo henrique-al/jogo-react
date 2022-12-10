@@ -1,17 +1,22 @@
 import React from "react";
 
+import './Help.css'
+
 const Help = () => {
   return (
     <div className="fundo-help">
       <div className="conteudo-help">
         <div className="wd-help">
           <h1>Write or Die</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, est harum magni voluptates quidem adipisci tenetur itaque sequi officiis illo, vitae molestiae eum. Eius praesentium suscipit natus, amet expedita ipsam!</p>
         </div>
         <div className="jv-help">
-          <h1>TIC-TAC-TOE</h1>
+          <h1>Tic-Tac-Toe</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore quod facilis corrupti consequuntur ea numquam vel quam quis dicta. Repudiandae nulla dolorum numquam amet quo tenetur qui! Sint, voluptatibus dicta.</p>
         </div>
-        <div className="lights-help">
+        <div className="lo-help">
           <h1>Lights Out</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore cum, maxime quod atque unde quasi velit consequatur ratione aliquam nihil voluptatem repudiandae natus praesentium vel aliquid aut consectetur tempore veniam.</p>
         </div>
       </div>
     </div>

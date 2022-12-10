@@ -73,7 +73,7 @@ const Modal = ({ titles, game, hero }: Props) => {
             </> : <div className="modal-skins"> 
               <Carrossel hero={hero} />
               <Link to={'/'}><button className="btnSair btn-modal" onClick={() => handleExit()}>Sair</button></Link>
-              <Link to={'/Regras'}><button className="btnRegras btn-modal" onClick={() => handleExit()}>Regras</button></Link>
+              <Link to={'/help'}><button className="btnRegras btn-modal">Regras</button></Link>
             </div>}
           </div>
         </div>

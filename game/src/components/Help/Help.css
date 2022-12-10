@@ -1,0 +1,36 @@
+.fundo-help{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.274);
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.conteudo-help{
+  width: fit-content;
+  max-width: 900px;
+  height: fit-content;
+  padding: 20px;
+  background-color: red;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+/* .conteudo-help div:not(:last-child){
+  margin-right: 100px;
+} */
+
+.wd-help, .jv-help, .lo-help{
+  text-align: justify;
+}
+
+.wd-help h1, .jv-help h1, .lo-help h1{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+}

@@ -1,16 +1,12 @@
 import { useEffect, useState } from "react";
 import * as C from "./App.styles";
 import { Character } from "../Character/index";
-import { useCharacter } from "../../hooks/useCharacter";
 import { Hero } from "../../classes/Character/Character";
 import "./Home.css";
 import Modal from "../Modal/Modal";
 
-// type Props = {
-//   hero: Hero;
-// };
-const Home = (/*{ hero }: Props*/) => {
-  const char = useCharacter();
+const Home = () => {
+
   const [game, setGame] = useState<number>(0);
   const [hero, setHero] = useState<Hero>(JSON.parse(localStorage.getItem('player') ?? '{}'))
   useEffect(() => {
@@ -42,7 +38,7 @@ const Home = (/*{ hero }: Props*/) => {
             game={game}
           />
         )}
-        <Character side={char.side} src={hero.img} />
+        <Character src={hero.img} />
       </div>
     </>
   );
