@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace');
+
 .game__wd {
   width: 100vw;
   height: 100vh;
-  background: url('https://i.imgur.com/kZdjzfb.jpg')  no-repeat;
+  background-size: cover;
+  animation: animacaoFundo 1s alternate infinite linear;
+  background: url('https://i.imgur.com/kZdjzfb.jpg') no-repeat; 
   background-size: cover;
 }
 
-.modalWDContainer{
+@keyframes animacaoFundo {
+  0%{background-blend-mode: darken;}
+  100%{background-blend-mode: darken;}
+  /* 75%{-moz-background-inline-policy: bounding-box;}
+  100%{background-repeat: 4;} */
+}
+
+.modalWDContainer {
   background-color: rgba(0, 0, 0, 0.342);
   width: 100vw;
   height: 100vh;
@@ -17,11 +28,12 @@
   z-index: 10;
 }
 
-.modal-WD{
+.modal-WD {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: white;
+  width: 400px;
+  height: 400px;
+  background: rgb(4, 164, 184);
+  background: radial-gradient(circle, rgba(4, 164, 184, 1) 0%, rgba(0, 66, 98, 1) 81%);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -29,11 +41,7 @@
   align-items: center;
 }
 
-.modal-WD h1{
-  font-size: 30px;
-}
-
-.modal-WD button{
+.modal-WD button {
   color: black;
   font-weight: light;
   background-color: whitesmoke;
@@ -41,9 +49,31 @@
   padding: 10px;
   border-radius: 10px;
   transition: .4s;
+  cursor: pointer;
+  margin-bottom: 25px;
 }
 
-.modal-WD button:hover{
+.modal-WD button:hover {
   color: #ffffff;
   background-color: #000000;
+}
+
+.gameOverWD {
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-size: 50px;
+  color: white;
+  letter-spacing: 5px;
+}
+
+.informacoesWD{
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+}
+
+.concatInformacao{
+  color: rgb(0, 26, 59);
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
 }

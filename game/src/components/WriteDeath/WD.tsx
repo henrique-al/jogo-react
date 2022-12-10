@@ -8,6 +8,7 @@ import './wd.css'
 
 import * as C from "./style";
 import { ranking } from "./types/Ranking";
+import { kill } from "process";
 
 
 const WriteDeath = () => {
@@ -120,10 +121,11 @@ const WriteDeath = () => {
     <>
       {gameOver && <div className="modalWDContainer">
         <div className="modal-WD">
-          <h1>Game Over</h1>
+          <h1 className="gameOverWD">Game Over</h1>
           <span>
-            <p>Chegou ao nível {level}</p>
-            <p>Você matou: {killCount}</p>
+            <p className="informacoesWD">Nível alcançado:<p className="concatInformacao">{level}</p> </p>
+            <br />
+            <p className="informacoesWD">Você matou: <p className="concatInformacao">{killCount}</p></p>
           </span>
           <div className="buttons-wd">
             <button onClick={() => handleClick()}>Voltar ao mapa</button>
