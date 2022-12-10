@@ -4,11 +4,12 @@ import { Hero } from "../../classes/Character/Character";
 import "./JogoDaVelha.css";
 
 const JogoDaVelha = () => {
+
   // criando uma tabela com 9 elementos vazios
   const tabelaVazia = Array(9).fill("");
 
   // criando uma tabela com React Hooks (useState = tabela vazia)
-  const [board, setBoard] = useState(tabelaVazia);
+  const [tabelaJV, settabelaJV] = useState(tabelaVazia);
 
   // definindo o jogador que irá iniciar o jogo (useState = Espada)
   const [jogadorAtual, setjogadorAtual] = useState("Espada");
@@ -52,13 +53,13 @@ const JogoDaVelha = () => {
     }
 
     // quando o elemento já foi clicado anteriormente
-    if (board[index] !== "") {
+    if (tabelaJV[index] !== "") {
       return null;
     }
 
     // alterando a tabela para a verificação de clique de um jogador
-    setBoard(
-      board.map((item, itemIndex) =>
+    settabelaJV(
+      tabelaJV.map((item, itemIndex) =>
         itemIndex === index ? jogadorAtual : item
       )
     );
@@ -70,23 +71,23 @@ const JogoDaVelha = () => {
   const verificarGanhador = () => {
     const possiveisJogadas = [
       // horizontais
-      [board[0], board[1], board[2]],
-      [board[3], board[4], board[5]],
-      [board[6], board[7], board[8]],
+      [tabelaJV[0], tabelaJV[1], tabelaJV[2]],
+      [tabelaJV[3], tabelaJV[4], tabelaJV[5]],
+      [tabelaJV[6], tabelaJV[7], tabelaJV[8]],
 
       // verticais
-      [board[0], board[3], board[6]],
-      [board[1], board[4], board[7]],
-      [board[2], board[5], board[8]],
+      [tabelaJV[0], tabelaJV[3], tabelaJV[6]],
+      [tabelaJV[1], tabelaJV[4], tabelaJV[7]],
+      [tabelaJV[2], tabelaJV[5], tabelaJV[8]],
 
       // diagonais
-      [board[0], board[4], board[8]],
-      [board[2], board[4], board[6]],
+      [tabelaJV[0], tabelaJV[4], tabelaJV[8]],
+      [tabelaJV[2], tabelaJV[4], tabelaJV[6]],
     ];
 
     // verificando o array para descobrir o ganhador através do método every()
     possiveisJogadas.forEach((elementos) => {
-      if (elementos.every((cell) => cell === "Escudo")) {
+      if (elementos.every((celulaJV) => celulaJV === "Escudo")) {
         setRanking((ranking) =>
           [...ranking, jogador]
             .sort((a: any, b: any) => a.score - b.score)
@@ -99,7 +100,7 @@ const JogoDaVelha = () => {
         setJogador({ name: jogador.name, score: 0 });
         return; 
       }
-      if (elementos.every((cell) => cell === "Espada")) {
+      if (elementos.every((celulaJV) => celulaJV === "Espada")) {
         marcarPonto();
         setWinner("Espada");
       }
@@ -112,11 +113,11 @@ const JogoDaVelha = () => {
   };
 
   // chamando outro elemento do React Hooks (useEffect) para verificar o ganhador da jogada
-  useEffect(verificarGanhador, [board]);
+  useEffect(verificarGanhador, [tabelaJV]);
 
   // verificando se deu empate no jogo
   const deuEmpate = () => {
-    if (board.every((item) => item !== "") || !{ winner }) {
+    if (tabelaJV.every((item) => item !== "") || !{ winner }) {
       setWinner("E");
       setJogador({ name: jogador.name, score: 0 });
       if (gameOver) {
@@ -135,7 +136,7 @@ const JogoDaVelha = () => {
   // resetando o jogo
   const resetaJogo = () => {
     setjogadorAtual("Espada");
-    setBoard(tabelaVazia);
+    settabelaJV(tabelaVazia);
     setWinner("");
     if (gameOver) {
       setRanking((ranking) =>
@@ -160,13 +161,15 @@ const JogoDaVelha = () => {
 
   return (
     <div className="jogoDaVelhaMain">
-      <h1 className="title">Jogo da Velha</h1>
+      <h1 className="title">TIC</h1>
+      <h1 className="title">TAC</h1>
+      <h1 className="title">TOE</h1>
 
-      <div className={`board ${winner ? "game-over" : ""}`}>
-        {board.map((item, index) => (
+      <div className={`tabelaJV ${winner ? "game-over" : ""}`}>
+        {tabelaJV.map((item, index) => (
           <div
             key={index}
-            className={`cell ${item}`}
+            className={`celulaJV ${item}`}
             onClick={() => clicar(index)}
           >
             {item}

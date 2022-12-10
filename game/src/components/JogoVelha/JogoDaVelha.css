@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .jogoDaVelhaMain {
   display: grid;
@@ -15,26 +16,25 @@
   height: 80px;
   font-size: 3rem;
   color: rgb(252, 201, 155);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
   border-radius: 0 20px 0 20px;
-  animation: trocaCor 7s infinite alternate;
+  animation: trocaCor 5s infinite alternate;
   margin-bottom: 2rem;
-  border: solid rgb(209, 122, 9);
-  font-family: 'Kdam Thmor Pro', sans-serif;
-  margin-left: -100px;
+  font-size: 90px;
+  font-family: 'Press Start 2P', cursive;
+  margin-left: -1150px;
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
 
-.board {
+.tabelaJV {
+  margin-top: -680px;
   display: grid;
   grid-template-columns: repeat(3, 240px);
   grid-template-rows: repeat(3, 200px);
   gap: 1rem;
 }
 
-.cell {
+.celulaJV {
   border-radius: 20px 0 20px 0;
   font-weight: 500;
   color: rgb(75, 24, 0);
@@ -45,25 +45,25 @@
 
 @keyframes trocaCor {
   0% {
-      color: brown;
+      color: rgb(253, 3, 3);
   }
 
   50% {
-      color: white;
+      color: rgb(255, 126, 67);
   }
 
   100% {
-      color: rgb(250, 241, 112);
+      color: rgb(250, 162, 0);
   }
 }
 
-.cell.Escudo,
-.cell.Espada,
-.game-over .cell {
+.celulaJV.Escudo,
+.celulaJV.Espada,
+.game-over .celulaJV {
   cursor: not-allowed;
 }
 
-.cell:not(.Escudo):not(.Espada):hover {
+.celulaJV:not(.Escudo):not(.Espada):hover {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
@@ -77,18 +77,9 @@
   align-items: center;
 }
 
-.board.game-over {
+.tabelaJV.game-over {
   opacity: 0.8;
 }
-
-/* .winner-message {
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  width: 300px;
-  background-color: #c09405;
-  border-radius: 10px;
-} */
 
 .winner-message span.Espada {
   color: brown;
@@ -125,8 +116,8 @@
   background-color: rgb(190, 162, 3);
 }
 
-.cell.Espada,
-.cell.Escudo {
+.celulaJV.Espada,
+.celulaJV.Escudo {
   background-position: 50% 60%;
   background-repeat: no-repeat;
   display: flex;
@@ -134,12 +125,12 @@
   justify-content: center;
 }
 
-.cell.Espada {
+.celulaJV.Espada {
   background-image: url('../../../public/assets/espadaPers.png');
   background-size: 100px;
 }
 
-.cell.Escudo {
+.celulaJV.Escudo {
   background-image: url('../../../public/assets/escudoPers.png');
   background-size: 100px;
 }
@@ -171,9 +162,10 @@
 
 .placar-derrota-jv{
   margin: 10px 38px;
-  font-size: 48px;
+  font-size: 40px;
   text-align: center;
   font-family: 'Covered By Your Grace', cursive;
+  color: rgb(250, 237, 122);
 }
 
 .modalGameOver, .modalWinner {
