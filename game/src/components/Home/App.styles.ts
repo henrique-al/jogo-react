@@ -14,7 +14,7 @@ export const Map = styled.div`
   width: 650px;
   height: 650px;
   position: relative;
-  background-image: url('/assets/map.png');
+  background-image: url('/assets/map2.png');
   background-position: left top;
   background-size: 100%;
 `;
