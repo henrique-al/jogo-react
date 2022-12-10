@@ -14,7 +14,7 @@ export const Personagem = styled.img<{distance: number}>`
   float: ${props => props.pos};
   background-image: url(${props => props.src});
   background-position: center center;
-  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
   bottom: 25px;
   left: ${props => props.distance}px;
@@ -54,6 +54,6 @@ export const life = styled.div`
   position: absolute;
   font-size: 100px;
   font-weight: bold;
-  left: 1050px;
-  top: 200px;
+  left: 1055px;
+  top: 180px;
 `

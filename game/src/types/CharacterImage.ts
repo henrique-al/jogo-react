@@ -1,1 +1,0 @@
-export type CharacterImages = 'mcfly' | 'dinossauro' | 'medieval' | 'futurista'

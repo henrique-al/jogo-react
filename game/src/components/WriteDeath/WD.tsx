@@ -8,14 +8,9 @@ import './wd.css'
 
 import * as C from "./style";
 import { ranking } from "./types/Ranking";
-import { Link } from "react-router-dom";
 
-// type Props = {
-//   src: string,
-//   heroLC: Hero
-// }
 
-const WriteDeath = (/*{src, heroLC}: Props*/) => {
+const WriteDeath = () => {
   const [enemiesState, setEnemiesState] = useState<Enemy[]>(Enemy.getEnemies()); 
   const [enemiesLetters, setEnemiesLetters] = useState<string[]>([]);
   const [killCount, setKillCount] = useState<number>(0);
@@ -25,7 +20,7 @@ const WriteDeath = (/*{src, heroLC}: Props*/) => {
   );
   const [gameOver, setGameOver] = useState<boolean>(false);
   const [contSeg, setContSeg] = useState(5)
-  const [heroLC, setHeroLC] = useState<Hero>(JSON.parse(localStorage.getItem('player') ?? '{}'))
+  const heroLC: Hero = JSON.parse(localStorage.getItem('player') ?? '{}')
   const src: string = heroLC.img.includes('medieval')? 'medievalGrande':heroLC.img.includes('futurista')? 'robocopGrande':heroLC.img.includes('mcfly')? 'mcflyGrande':'dinossauroGrande'
   const hero = new Hero(heroLC.name, 5, src);
 
@@ -37,15 +32,20 @@ const WriteDeath = (/*{src, heroLC}: Props*/) => {
     if (e.code.includes("Key") && !e.ctrlKey) {
       const enemies: Enemy[] = Enemy.getEnemies();
       const key = e.code.replace("Key", "").toLowerCase();
-      for (let i = 0; i < Enemy.getEnemies().length; i++) {
-        if (enemies[i].getLetters().includes(key)) {
-          setEnemiesLetters([...enemies[i].getLetters()]);
-          if (enemies[i].removeLetter(key)) {
+        if (enemies[enemies.length -1].getLetters().includes(key)) {
+          setEnemiesLetters([...enemies[enemies.length -1].getLetters()]);
+          if (enemies[enemies.length -1].removeLetter(key)) {
             setKillCount((killCount) => killCount + 1);
           }
           setEnemiesState(Enemy.getEnemies());
+        } else{
+          hero.setLife(hero.getLife() - 1)
+          setContSeg((cont) => cont-1)
+          if (hero.getLife() === 0) {
+            killHero()
+            return
+          }
         }
-      }
     }
   }, []);
 
@@ -68,7 +68,7 @@ const WriteDeath = (/*{src, heroLC}: Props*/) => {
       return;
     }
     const randomClass: number = Math.floor(Math.random() * 2);
-    const enemy: Enemy = randomClass === 0 ? new Clock() : new Skeleton();
+    const enemy: Enemy = randomClass === 0 ? new Clock(level) : new Skeleton(level);
     Enemy.addEnemies(enemy);
     setEnemiesState([...Enemy.getEnemies()]);
     setEnemiesLetters([...enemy.getLetters()]);

@@ -1,7 +1,4 @@
-import { useState } from "react";
 import useMousePosition from "../../hooks/useMousePosition";
-import { CharacterImages } from "../../types/CharacterImage";
-import { CharacterSides } from "../../types/CharacterSides";
 import * as C from "./styles";
 
 type Props = {
@@ -10,7 +7,7 @@ type Props = {
 
 export const Character = ({ src }: Props) => {
   const mousePos = useMousePosition()
-  const size = 50;
+  const size = src.includes('medieval')? {w: 34, h: 52}:src.includes('mcfly')? {w: 50, h: 62}:src.includes('dinossauro')? {w: 38, h: 55}:{w: 46, h: 53};
 
   return (
     <C.Container

@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.div<{size: number, left: number, top: number, char: string}>`
+export const Container = styled.div<{size: {w: number, h: number}, left: number, top: number, char: string}>`
   display: block;
-  width: ${props=>props.size}px;
-  height: ${props=>props.size}px;
+  width: ${props=>props.size.w}px;
+  height: ${props=>props.size.h}px;
   position: absolute;
   left: ${props=>props.left}px;
   top: ${props=>props.top}px;
   background-image: url('${props => props.char}');
-  background-position: 0px -100px;
+  backgroud-repeat: no-repeat;
+  background-position: 0px 0px;
   `;

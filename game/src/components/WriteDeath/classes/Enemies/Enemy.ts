@@ -8,13 +8,15 @@ export abstract class Enemy {
   public img: string;
   private distance: number;
   protected fly: boolean;
+  private static qtdLetters: number = 0;
 
-  constructor(img: string) {
+  constructor(img: string, level: number) {
     this.dano = 1;
     this.letters = this.generateLetters();
     this.img = img;
     this.distance = 0;
     this.fly = img.includes('Voador')? true:false;
+    Enemy.qtdLetters = level
   }
 
   private generateLetters(): string[] {
@@ -48,7 +50,7 @@ export abstract class Enemy {
 
     const letters: string[] = []
 
-    for (let i: number = 0; i < Math.floor(Math.random() * 5) + 1; i++) {
+    for (let i: number = 0; i < Enemy.qtdLetters+1; i++) {
       do{
         const random = Math.floor(Math.random() * 26)
         var randomLetter = allLetters[random]
