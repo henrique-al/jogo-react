@@ -7,7 +7,7 @@ import "./Cadastro.css";
 const Cadastro = () => {
   const [name, setName] = useState<string>('');
 
-  const handleSubmit = (): void => {
+  const handleClick = (): void => {
     localStorage.setItem("player", JSON.stringify(new Hero(name, 5, 'mcfly')));
   };
 
@@ -15,7 +15,7 @@ const Cadastro = () => {
     setName((name) => name=v)
   };
   return (
-    <form className="cadastro">
+    <div className="cadastro">
       <div className="modal-cadastro">
         <h1 className="gradient title-cadastro">Play or Die</h1>
         <div className="container">
@@ -30,13 +30,13 @@ const Cadastro = () => {
           <br />
           <br />
           <Link to={`${name !== ''? '/map':'/'}`} className="link">
-            <button type="submit" onSubmit={() => handleSubmit()} className="cadastro">
+            <button type="submit" onClick={() => handleClick()} className="cadastro">
               Ir para o Jogo
             </button>
           </Link>
         </div>
       </div>
-    </form>
+    </div>
   );
 };
 
