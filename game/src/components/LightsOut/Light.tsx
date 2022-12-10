@@ -13,7 +13,7 @@ const Light = ({cellIndex, isOn, changeLight}: Props) => {
     changeLight(cellIndex)
   }
   return (
-    <button className={`cell ${isOn? "on":"off"}`} onClick={() => handleClick()}></button>
+    <button className={`light ${isOn? "on":"off"}`} onClick={() => handleClick()}></button>
   )
 }
 

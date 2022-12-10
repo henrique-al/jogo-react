@@ -1,12 +1,14 @@
-.cell{
+.light{
   width: 50px;
   aspect-ratio: 1/1;
   border-radius: 100%;
   border: 0;
+  cursor: pointer;
 }
 
 .on{
   background-color: #9a55da;
+  box-shadow: 0px 0px 25px 0px #9a55da;
 }
 
 .off{

@@ -1,5 +1,21 @@
+.container-board{
+  height: 100vh;
+  width: fit-content;
+  padding: 30px;
+  background-color: #a3a3a3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-board h1{
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
 .board {
-  border: 1px solid gray;
   width: 500px;
   height: 500px;
   display: flex;
@@ -15,4 +31,46 @@
   height: 20%;
   justify-content: space-around;
   align-items: center;
+}
+
+.modal-lo{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.288);
+}
+
+.modal-lo-content{
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-lo-content h1{
+  margin-bottom: 20px;
+}
+
+.modal-lo-content button{
+  margin-top: 20px;
+  color: black;
+  font-weight: light;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  transition: .4s;
+}
+
+.modal-lo-content button:hover{
+  color: #ffffff;
+  background-color: #000000;
 }
