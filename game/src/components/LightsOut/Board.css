@@ -1,18 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace');
+
 .container-board{
   height: 100vh;
   width: fit-content;
   padding: 30px;
-  background-color: #a3a3a3;
+  background-color: #dbdbdb;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 100px;
+  border: solid #9a55da 0.5px;
 }
 
 .container-board h1{
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 500;
   margin-bottom: 40px;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  animation: alteraCorTituloLO 6s alternate infinite;
+  border-radius: 10px;
+}
+
+@keyframes alteraCorTituloLO {
+  from{color: gray;}
+  to{color: white;  box-shadow: 0px 0px 60px 0px #9a55da; background-color: #9a55da;}
 }
 
 .board {

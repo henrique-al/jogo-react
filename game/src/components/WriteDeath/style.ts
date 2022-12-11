@@ -5,7 +5,8 @@ export const Personagem = styled.img<{distance: number}>`
   height: 361px;
   position: absolute;
   left: ${props => props.distance}px;
-  top: 295px;
+
+  animation: animacao3 1s alternate infinite; @keyframes animacao3 { from{  top: 350px;} to {top: 355px;}}
   `;
 
   export const Enemy = styled.div<{ pos: string, src: string, distance: number, fly:boolean }>`
@@ -23,11 +24,14 @@ export const Personagem = styled.img<{distance: number}>`
   justify-content: flex-start;
   align-items: center;
   z-index: 1;
-  ${props => props.fly ? 'top: 80px':''}
+
+  ${props => props.fly ? 
+  ' animation: animacao 400ms alternate infinite; @keyframes animacao {from{top: 100px; } to {top: 150px; }}'
+  :
+  ' animation: animacao2 200ms alternate infinite; @keyframes animacao2 { from{top: 450px;} to {top: 453px;}}'}
 `
 
 export const EnemyLetter = styled.div`
-    background-color: #000;
     padding: 10px;
     border-radius: 5px;
     position: absolute;
@@ -35,6 +39,7 @@ export const EnemyLetter = styled.div`
     text-align: center;
     margin-top: -30px;
     color: white;
+    background-color: rgb(0, 1, 46);
 `;
 
 export const Level = styled.div`
@@ -54,6 +59,7 @@ export const life = styled.div`
   position: absolute;
   font-size: 100px;
   font-weight: bold;
-  left: 1055px;
-  top: 180px;
+  left: 1390px;
+  top: 10px;
+  color: red; 
 `

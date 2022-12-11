@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Light from "./Light";
 
 import "./Board.css";
@@ -17,6 +17,9 @@ const Board = ({ size, on }: Props) => {
   const [ranking, setRanking] = useState<
     [{ name: string; score: { min: number; seg: number } }]
   >(JSON.parse(localStorage.getItem("placarLO") ?? "[]"));
+  useEffect(() => {
+    localStorage.setItem('placarLO', JSON.stringify(ranking))
+  }, [])
   const name: string = JSON.parse(localStorage.getItem("player") ?? "{}").name;
   const randomLight = (): boolean => {
     return Math.random() < on;
