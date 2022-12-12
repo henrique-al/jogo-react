@@ -51,15 +51,15 @@ const Modal = ({ titles, game, hero }: Props) => {
               <div className="ranking-modal">
                 <h4 className="ranking-titulo">RANKING</h4>
                 <p>
-                  {placar[0]?.name} - {game === 5? placar[0]?.score?.min+':'+placar[0]?.score?.seg:placar[0]?.score}
+                  {placar[0]?.name} - {game === 5? placar[0]?.score?.min? placar[0]?.score?.min:''+':'+placar[0]?.score?.seg? placar[0]?.score?.seg:'':placar[0]?.score}
                 </p>
                 <div className="line"></div>
                 <p>
-                  {placar[1]?.name} - {game === 5? placar[1]?.score?.min+':'+placar[1]?.score?.seg:placar[1]?.score}
+                  {placar[1]?.name} - {game === 5? placar[1]?.score?.min? placar[1]?.score?.min:''+':'+placar[1]?.score?.seg? placar[1]?.score?.seg:'':placar[1]?.score}
                 </p>
                 <div className="line"></div>
                 <p>
-                  {placar[2]?.name} - {game === 5? placar[2]?.score?.min+':'+placar[2]?.score?.seg:placar[2]?.score}
+                  {placar[2]?.name} - {game === 5? placar[2]?.score?.min? placar[2]?.score?.min:''+':'+placar[2]?.score?.seg? placar[2]?.score?.seg:'':placar[2]?.score}
                 </p>
               </div>
               <br />

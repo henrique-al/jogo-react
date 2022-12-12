@@ -17,9 +17,6 @@ const Board = ({ size, on }: Props) => {
   const [ranking, setRanking] = useState<
     [{ name: string; score: { min: number; seg: number } }]
   >(JSON.parse(localStorage.getItem("placarLO") ?? "[]"));
-  useEffect(() => {
-    localStorage.setItem('placarLO', JSON.stringify(ranking))
-  }, [])
   const name: string = JSON.parse(localStorage.getItem("player") ?? "{}").name;
   const randomLight = (): boolean => {
     return Math.random() < on;
@@ -118,7 +115,7 @@ const Board = ({ size, on }: Props) => {
       {hasWon() && (
         <div className="modal-lo">
           <div className="modal-lo-content">
-            <h1>Game Over</h1>
+            <h1>Você ganhou!!</h1>
             <p>
               Seu tempo foi: {time.min}:
               {time.seg > 9 ? time.seg : "0" + time.seg}

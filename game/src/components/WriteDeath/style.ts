@@ -6,7 +6,7 @@ export const Personagem = styled.img<{distance: number}>`
   position: absolute;
   left: ${props => props.distance}px;
 
-  animation: animacao3 1s alternate infinite; @keyframes animacao3 { from{  top: 350px;} to {top: 355px;}}
+  animation: animacao3 1s alternate infinite; @keyframes animacao3 { from{  top: 250px;} to {top: 255px;}}
   `;
 
   export const Enemy = styled.div<{ pos: string, src: string, distance: number, fly:boolean }>`
@@ -59,7 +59,7 @@ export const life = styled.div`
   position: absolute;
   font-size: 100px;
   font-weight: bold;
-  left: 1390px;
+  left: 1200px;
   top: 10px;
   color: red; 
 `

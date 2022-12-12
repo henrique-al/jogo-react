@@ -3,8 +3,7 @@
 .game__wd {
   width: 100vw;
   height: 100vh;
-  background-size: cover;
-  background: url('https://i.redd.it/qmfjuz883g7z.png') no-repeat; 
+  background: url('https://i.redd.it/qmfjuz883g7z.png') no-repeat;
   background-size: cover;
 }
 
