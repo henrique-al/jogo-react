@@ -12,7 +12,7 @@
 
 .conteudo-help{
   width: fit-content;
-  max-width: 900px;
+  max-width: 1500px;
   height: fit-content;
   padding: 20px;
   background-color: rgb(0, 1, 46);
@@ -25,16 +25,15 @@
 }
 
 .titleHelp{
-  color: rgb(2, 181, 226);
+  color: rgb(1, 132, 165);
   font-family: 'Kdam Thmor Pro', sans-serif;
-}
-
-.wd-help, .jv-help, .lo-help{
-  text-align: justify;
-}
-
-.wd-help h1, .jv-help h1, .lo-help h1{
-  text-align: center;
+  text-align: center;  
   font-size: 30px;
   font-weight: 500;
+  background-color: rgb(207, 228, 247);
+  
+}
+
+.wd-help, .jv-help, .lo-help, .general-help{
+  text-align: justify;
 }
